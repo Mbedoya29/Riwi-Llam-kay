@@ -12,3 +12,8 @@
 .imgCarousel{
     animation-timeline: 20;
 }
+
+.btn{
+    width: 200px;
+
+}
