@@ -1,0 +1,14 @@
+{
+    "users":[
+        {
+            "name": "mariana",
+            "lastname": "Bedoya"
+        }
+    ],
+    "products": [
+        {
+            "name":"frutas",
+            "description": "description"
+        }
+    ]
+}
