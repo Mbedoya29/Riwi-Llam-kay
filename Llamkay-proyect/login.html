@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <//amka'y> </title> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="shortcut icon" href="./img/web-icon.png">
+</head>
+<body> 
+    <!--<div class="forms-container">
+        --sección de registro--
+        <div class="signup">
+            <form action="#" class="sign-up-form">
+                <h2 class="title">Registrarse</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Usuario">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Correo Electronico">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Contraseña">
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-user-pen"></i>
+                        <select id="" class="type-acount">
+                            <option value="#" selected="" disabled="" class="option">Tipo de cuenta</option>
+                            <option value="developer" class="option">Desarrollador</option>
+                            <option value="company" class="option">Empresa</option>
+                        </select>
+                </div>
+                <input type="submit" value="Ingresar" class="btn solid">
+            </form>
+        </div>
+        --Sección de Inicio de sesion--
+        <div class="signin">
+            <form action="#" class="sign-in-form">
+                <h2 class="title">Iniciar Sesión</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Usuario">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Contraseña">
+                </div>
+                <input type="submit" value="Ingresar" class="btn solid">
+            </form>
+        </div>
+    </div>
+    --Cortina de transición--
+    <div class="overlay-container">
+        --Cortina Izquierda--
+        <div class="overlay">
+            <div class="overlay-left">
+                <h1>
+                    ¡Bienvenido de nuevo! Ingresa tus datos para acceder.
+                </h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <button id="signin">sign In</button>
+            </div>
+        </div>
+        --Cortina Derecha--
+        <div class="overlay-right">
+            <h1>
+                Únete a nuestra plataforma. Regístrate aquí.
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <button id="signup">sign Up</button>
+        </div>
+    </div> -->
+    <div class="container" id="container">
+        <!--Apartado de Registro-->
+        <div class="form-container sign-up">
+            <form>
+                <h1>Crear cuenta nueva</h1>
+                <div class="input-field">
+                    <input type="text" placeholder="Usuario" id="user">
+                    <input type="email" placeholder="Correo Electronico" id="email">
+                    <input type="password" placeholder="Contraseña" id="password">
+                    <div class="input-field">
+                            <select id="type-acount" class="type-acount">
+                                <option value="#" selected="" disabled="" class="option">Tipo de cuenta</option>
+                                <option value="developer" class="option">Desarrollador</option>
+                                <option value="company" class="option">Empresa</option>
+                            </select>
+                    </div>
+                </div> 
+                <button>Ingresar</button>
+            </form>
+        </div>
+        <!--Apartado de Inicio Sesion-->
+        <div class="form-container sign-in">
+            <form>
+                <h1>Inicio de Sesión</h1>
+                <div class="input-field">
+                    <input type="text" placeholder="Usuario">
+                    <input type="password" placeholder="Contraseña">
+                </div>
+                <button>Ingresar</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>¡Bienvenido de nuevo! Ingresa tus datos para acceder.</h1>
+                    <p>Ingresa tus datos personalespara ingresar al sitio</p>
+                    <button class="hidden" id="login">
+                        Iniciar Sesión
+                    </button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>¡Bienvenido Ingresa tus datos para acceder.</h1>
+                    <p>Registra tus datos personalespara ingresar al sitio</p>
+                    <button class="hidden" id="register">
+                        Registro
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="animation.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
