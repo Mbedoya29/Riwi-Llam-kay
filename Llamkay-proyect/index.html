@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwi Llamk'ay</title>
+    <link rel="icon" type="image/x-icon" href="./Recursos/isotipo.png">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body data-bs-theme="light" id="theme-body" value="light">
+  <!--________________________________________HEADER________________________________________-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <header class="header">
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+              <div class="container-fluid">
+               <img class="favicon" src="./Recursos/logotipo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+  
+                <a class="navbar-brand" href="">Riwi Llamk'ay</a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    </li>
+                  </ul>
+                  
+                  <div class="dropdown">
+                    <button id="language" class="btn btn-secondary dropdown-toggle btn-lenguage" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Idioma
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <button class="dropdown-item">
+                          <img src="./Recursos/spain-flag.svg" alt="">Español
+                        </button></li>
+                      <li>
+                        <button class="dropdown-item">
+                          <img src="./Recursos/united-kingdom-flag-uk.svg" alt="">Inglés
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="dropdown">
+                    <button  class="btn btn-secondary dropdown-toggle btn-lenguage" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Seleccionar tema
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <button value="dark"  onclick="changeTheme('dark')" class="dropdown-item">
+                          <i class="fa-solid fa-moon me-2 fs-5"></i>Oscuro
+                        </button></li>
+                      <li>
+                        <button value="light"  onclick="changeTheme('light')" class="dropdown-item">
+                          <i class="fa-solid fa-sun me-2 fs-5"></i>Claro
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                  <span class="nav-link active">
+                    <a id="login" class="login" href="#">Ingresar / Crear cuenta</a>
+                  </span>
+                </div>
+              </div>
+            </nav>
+        </header>
+      </div>
+    </div>
+  </div>
+    <!--_______________________________________/HEADER________________________________________-->
+
+    <!--_______________________________________CAROUSEL_______________________________________-->
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./Recursos/banner.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./Recursos/Banner2.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./Recursos/Banner3.png" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!--______________________________________/CAROUSEL_______________________________________-->
+
+    <!--_________________________________________BODY_________________________________________-->
+    <!--WELCOME TEXT-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 id="title" class="text-center mt-5 mb-5">Bienvenido a Riwi Llam'kay</h2>
+          <p id="welcomeText" class="fs-4 text-center">Creemos en el poder de destacar talentos excepcionales en el campo del desarrollo. Queremos brindar a todos los estudiantes de Riwi la oportunidad de sobresalir y ser descubiertos por las mejores empresas en búsqueda de talento en el ámbito del desarrollo.</p>
+        </div>
+      </div>
+    </div>
+    <!--/WELCOME TEXT-->
+    
+    <!--CARDS-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6" id="companies">
+          <center>
+          <div class="card mt-5" style="width: 26rem;">
+            <img src="https://cmsresources.elempleo.com/co/assets/backend/styles/770x513/public/2022-04/iStock-1323647411%20(1).jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title fs-3">Empresas</h5>
+              <p class="card-text fs-5">Explora perfiles detallados, revisa proyectos anteriores y encuentra la combinación perfecta para fortalecer tu equipo.</p>
+              <a href="#" class="btn btn-primary">Entra</a>
+            </div>
+          </div>
+        </center>
+        </div>
+        <div class="col-md-6 " id="students"> 
+        <center>
+          <div class="card mt-5" style="width: 26rem;">
+            <img src="https://www.educaciontrespuntocero.com/wp-content/uploads/2022/09/cursos-de-programacion-ninos-978x652.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title fs-3">Coders</h5>
+              <p class="card-text fs-5">Este no es solo un espacio digital, es tu escenario para brillar y ser descubierto por aquellas empresas que buscan exactamente lo que tú ofreces.</p>
+              <a href="#" class="btn btn-primary">Entra</a>
+            </div>
+          </div>
+        </div>
+      </center>
+      <!--/CARDS-->
+
+      <!--MAP-->
+        <center>
+        <div class="col-md-12">
+           <h2 class="text-center mt-5 ">Encuentranos aquí</h3>
+          <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3357300114467!2d-75.5833746!3d6.219383100000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429e1dab04e05%3A0x5a77c25c8a5faf3a!2sDe%20Moda%20Outlet!5e0!3m2!1ses!2sco!4v1706044037735!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </center>
+      <!--/MAP-->
+
+      </div>
+    </div>
+    <!--________________________________________/BODY_________________________________________-->
+
+    <!--________________________________________FOOTER________________________________________-->
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-5">
+            <img src="./Recursos/isotipo.png" alt="">
+            <p class="fs-5 text-footer">Facilitamos la conexión entre individuos talentosos y empresas que buscan fortalecer sus equipos de desarrollo.
+            </p>
+          </div>
+
+          <div class="col-lg-4">
+
+            <h3 class="subtitles-footer">Contacto</h3>
+            <p class="fs-5"> 
+              <a href="https://www.google.com/maps/place/De+Moda+Outlet/@6.2193831,-75.5859495,17z/data=!3m1!4b1!4m6!3m5!1s0x8e4429e1dab04e05:0x5a77c25c8a5faf3a!8m2!3d6.2193831!4d-75.5833746!16s%2Fg%2F11gv_xr9wj?entry=ttu"><i class="fa-solid fa-location-dot icons-contact"></i></a>
+              Cl. 16 #55-129, Guayabal, Medellín CC. De Moda Outlet, piso 3</p>
+            <p class="fs-5">
+              <i class="fa-solid fa-envelope icons-contact"></i>
+              riwi.Llamk'ay@gmail.com</p>
+            <p class="fs-5">
+              <i class="fa-solid fa-phone icons-contact"></i>
+               123-456-7890</p>
+          </div>
+
+          <div class="col-lg-3 section-footer">
+          <center>
+            <h3 class="subtitles-footer">Redes sociales</h3>
+            <p>
+              <a href="https://www.facebook.com/people/Riwi/100092420949391/?locale=es_LA"><i class="fa-brands fa-square-facebook icons"></i></a>
+            
+              <a href="https://www.instagram.com/riwi.io/"><i class="fa-brands fa-square-instagram icons"></i></a>
+              
+              <a href="https://www.linkedin.com/company/riwi-io"><i class="fa-brands fa-linkedin icons"></i></a>
+          </p>
+          </div>
+        </center>
+        </div>
+      </div>
+    </footer>
+    <!--_______________________________________/FOOTER________________________________________-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
