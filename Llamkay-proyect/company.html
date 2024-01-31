@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Llamk'ay | Empresas</title>
+  <link rel="icon" type="image/x-icon" href="./Recursos/isotipo.png">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+</head>
+<body data-bs-theme="light" id="theme-body" value="light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <header class="header">
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                        <div class="container-fluid">
+                        <img class="favicon" src="./Recursos/logotipo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+
+                        <a class="navbar-brand" href="">Riwi Llamk'ay</a>
+                          
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                              <li class="nav-item">
+                                <a class="nav-link disabled" aria-disabled="true">Empresas</a>
+                              </li>
+                            </ul>
+
+                            <div class="dropdown">
+                                <button id="language" class="btn btn-secondary dropdown-toggle btn-lenguage" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Idioma
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li>
+                                    <button class="dropdown-item">
+                                      <img src="./Recursos/spain-flag.svg" alt="">Español
+                                    </button></li>
+                                  <li>
+                                    <button class="dropdown-item">
+                                      <img src="./Recursos/united-kingdom-flag-uk.svg" alt="">Inglés
+                                    </button>
+                                  </li>
+                                </ul>
+                            </div>
+            
+                            <div class="dropdown">
+                                <button  class="btn btn-secondary dropdown-toggle btn-lenguage" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Seleccionar tema
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li>
+                                    <button value="dark"  onclick="changeTheme('dark')" class="dropdown-item">
+                                      <i class="fa-solid fa-moon me-2 fs-5"></i>Oscuro
+                                    </button></li>
+                                  <li>
+                                    <button value="light"  onclick="changeTheme('light')" class="dropdown-item">
+                                      <i class="fa-solid fa-sun me-2 fs-5"></i>Claro
+                                    </button>
+                                  </li>
+                                </ul>
+                             </div>
+                            
+                            <span class="nav-link active">
+                              <a class="login" href="#">Cerrar sesion</a>
+                            </span>
+                        </div>
+                        </div>
+                    </nav>
+                </header>
+            </div>
+        </div>
+    </div>
+
+    <div class="container filtre text-center">
+        <div class="row">
+            <div class="col-md-12 d-flex">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Sexo
+                    </button>
+                    <ul class="dropdown-menu">
+                      <button class="dropdown-item" onclick="femaleGender()">Femenino</button>
+                      <button class="dropdown-item" onclick="maleGender()">Masculino</button>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Edad
+                    </button>
+                    <ul class="dropdown-menu">
+                      <button class="dropdown-item" onclick="age18()">Entre 18 y 25 años</button>
+                      <button class="dropdown-item" onclick="age25()">Entre 25 y 35 años</button>
+                      <button class="dropdown-item" onclick="age35()">Mayores de 35 años</button>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Inglés
+                    </button>
+                    <ul class="dropdown-menu">
+                      <button class="dropdown-item" onclick="levelA1()">A1</button>
+                      <button class="dropdown-item" onclick="levelA2()">A2</button>
+                      <button class="dropdown-item" onclick="levelB1()">B1</button>
+                      <button class="dropdown-item" onclick="levelB2()">B2</button>
+                      <button class="dropdown-item" onclick="levelC1()">C1</button>
+                      <button class="dropdown-item" onclick="levelC2()">C2</button>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Tipo de desarrollador
+                    </button>
+                    <ul class="dropdown-menu">
+                      <button class="dropdown-item" onclick="frontend()">Frontend</button>
+                      <button class="dropdown-item" onclick="backend()">Backend</button>
+                      <button class="dropdown-item" onclick="fullStack()">Full stack</button>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Lenguajes
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Python</a></li>
+                      <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                      <li><a class="dropdown-item" href="#">SQL</a></li>
+                      <li><a class="dropdown-item" href="#">Java</a></li>
+                      <li><a class="dropdown-item" href="#">C#</a></li>
+                      <li><a class="dropdown-item" href="#">.NET</a></li>
+                      <li><a class="dropdown-item" href="#">PHP</a></li>
+                      <li><a class="dropdown-item" href="#">React</a></li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container root">
+        <div class="row">
+            <div class="col-md-12">
+                    <div class="row" id="root">
+                      <div class="modal fade" id="information" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h3 class="modal-title" id="exampleModalLabel">Contacto</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <p id="nameModal"></p>
+                              <p id="emailModal"></p>
+                              <p id="phoneNumber"></p>
+                              <p id="skills"></p>
+                              <p id="lang"></p>
+                              <p id="portfolio"></p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-5">
+            <img src="./Recursos/isotipo.png" alt="">
+            <p class="fs-5 text-footer">Facilitamos la conexión entre individuos talentosos y empresas que buscan fortalecer sus equipos de desarrollo.
+            </p>
+          </div>
+
+          <div class="col-lg-4">
+
+            <h3 class="subtitles-footer">Contacto</h3>
+            <p class="fs-5"> 
+              <a href="https://www.google.com/maps/place/De+Moda+Outlet/@6.2193831,-75.5859495,17z/data=!3m1!4b1!4m6!3m5!1s0x8e4429e1dab04e05:0x5a77c25c8a5faf3a!8m2!3d6.2193831!4d-75.5833746!16s%2Fg%2F11gv_xr9wj?entry=ttu"><i class="fa-solid fa-location-dot icons-contact"></i></a>
+              Cl. 16 #55-129, Guayabal, Medellín CC. De Moda Outlet, piso 3</p>
+            <p class="fs-5">
+              <i class="fa-solid fa-envelope icons-contact"></i>
+              riwi.Llamk'ay@gmail.com</p>
+            <p class="fs-5">
+              <i class="fa-solid fa-phone icons-contact"></i>
+               123-456-7890</p>
+          </div>
+
+          <div class="col-lg-3 section-footer">
+          <center>
+            <h3 class="subtitles-footer">Redes sociales</h3>
+            <p>
+              <a href="https://www.facebook.com/people/Riwi/100092420949391/?locale=es_LA"><i class="fa-brands fa-square-facebook icons"></i></a>
+            
+              <a href="https://www.instagram.com/riwi.io/"><i class="fa-brands fa-square-instagram icons"></i></a>
+              
+              <a href="https://www.linkedin.com/company/riwi-io"><i class="fa-brands fa-linkedin icons"></i></a>
+          </p>
+          </div>
+        </center>
+        </div>
+      </div>
+    </footer>
+     
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js" ></script>
+</body>
+</html>
