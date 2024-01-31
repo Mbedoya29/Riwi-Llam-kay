@@ -19,6 +19,23 @@
     text-decoration: none;
     color: black;
 }
+.dropdown{
+    margin-right: 15px;
+}
+.btn-lenguage{
+    background-color: #6816DC!important;
+}
+.icons-themeDark{
+    font-size: x-large;
+    margin-right: 10px;
+    padding: 2px;
+}
+.icons-themeLight{
+    font-size: x-large;
+    margin-right: 10px;
+    padding: 2px;
+    color: #5E80A9;
+}
 /*_______________________/HEADER________________________*/
 
 
@@ -30,7 +47,6 @@
     max-width: 100%;
 }
 /*______________________/CAROUSEL_______________________*/
-
 
 /*_________________________BODY_________________________*/
 .btn-primary{
@@ -52,7 +68,7 @@
 
 /*________________________FOOTER________________________*/
 .footer{
-    background-color: rgb(230, 230, 230);
+    background-color: #f8f9fa;
     padding: 40px;
     margin-top: 80px;
 }
@@ -73,5 +89,11 @@
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 32px;
+}
+.dark{
+    background-color: rgb(40, 44, 48);
+}
+.light{
+    background-color: #F2F2F2;
 }
 /*_______________________/FOOTER________________________*/
