@@ -17,7 +17,7 @@ function changeTheme(param){
   }
 }
 
-function mostrarCoders(){
+function showCoders(){
   fetch("http://localhost:3000/coders")
     .then(response => {
          return response.json()
@@ -28,7 +28,6 @@ function mostrarCoders(){
 
       results.forEach(element => {
         coder += `
-
       <div class="col-md-3">
         <div class="card text-center" style="width: 18rem;">
           <img src="${element.img}" class="card-img-top img-fluid mx-auto d-block mt-3" alt="...">
@@ -42,8 +41,8 @@ function mostrarCoders(){
           </div>
         </div>
       </div>
-      
       `
+      cards.innerHTML = coder
       })
 })
 }
