@@ -17,6 +17,37 @@ function changeTheme(param){
   }
 }
 
+function mostrarCoders(){
+  fetch("http://localhost:3000/coders")
+    .then(response => {
+         return response.json()
+    }).then(data => {
+
+      const {results} = data
+      const cards = document.querySelector('#cards')
+
+      results.forEach(element => {
+        coder += `
+
+      <div class="col-md-3">
+        <div class="card text-center" style="width: 18rem;">
+          <img src="${element.img}" class="card-img-top img-fluid mx-auto d-block mt-3" alt="...">
+          <h4 id="${element.id}" class="title-text text-center mt-3 mb-3">${element.name}+ " " +${element.lastname}</h4>
+          <button class="badge text-bg skill1 mx-auto">${element.skill1}</button>
+          <div class="card-body">
+            <button class="badge text-bg-1 mb-3">${element.skill2}</button>
+            <button class="badge text-bg-1 mb-3">${element.skill3}</button>
+            <button class="badge text-bg-1 mb-3">${element.skill4}</button>
+            <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#information" value="${element.id}" src="${element.link}" >Ver perfil</button>
+          </div>
+        </div>
+      </div>
+      
+      `
+      })
+})
+}
+
 
 //listar
         
@@ -1131,6 +1162,276 @@ function fullStack(){
       })
   )) 
 }
+function edadfiltro(){
+  let filtro  = document.getElementById("edad").value
+  data = [];
+  document.getElementById("root").innerHTML = "";
+  fetch(`http://localhost:3000/coders`).then(r => r.json()).then(coders=> {
 
+  coders.forEach(function(element){
+    if(filtro == 1){
+      if(element.age >= 18 && element.age<=25){
+         data.push(element);
+         document.getElementById("root").innerHTML = "";
+          data.forEach(function(element) {
+    
+              let col = document.createElement('div');
+              col.classList.add("col-md-3");
+              root.appendChild(col)
+      
+              let card = document.createElement("div");
+              card.classList.add("card", "text-center");
+              card.setAttribute('style', "width: 18rem");
+              col.appendChild(card);
+      
+              let img = document.createElement("img");
+              img.classList.add('card-img-top', 'img-fluid', "mx-auto","d-block", "mt-3");
+              img.setAttribute('src' , element.img );
+              card.appendChild(img);
+      
+              let nombre = document.createElement("h4");
+              nombre.innerText= element.name + " " +element.lastname;
+              nombre.classList.add("title-text", "text-center", "mt-3", "mb-3")
+              card.appendChild(nombre);
+              nombre.setAttribute('id' , element.id);
+              card.appendChild(nombre);
+      
+              let skill1 = document.createElement("button");
+              skill1.classList.add("badge",  'text-bg', "skill1", "mx-auto");
+              skill1.innerText= element.skill1;
+              card.appendChild(skill1);
+      
+              let card_body = document.createElement("div");
+              card_body.classList.add("card-body");
+              card.appendChild(card_body);              
+                          
+              let skill2 = document.createElement("button");
+              skill2.classList.add("badge", 'text-bg-1', "mb-3");
+              skill2.innerText= element.skill2;
+              card_body.appendChild(skill2);
+                          
+              let skill3 = document.createElement("button");
+              skill3.classList.add("badge", 'text-bg-1', "mb-3");
+              skill3.innerText= element.skill3;
+              card_body.appendChild(skill3);
+      
+              let skill4 = document.createElement("button");
+              skill4.classList.add("badge", 'text-bg-1', "mb-3");
+              skill4.innerText= element.skill4;
+              card_body.appendChild(skill4);
+      
+              let details = document.createElement("button");
+              details.classList.add("btn", "btn-primary");
+              details.setAttribute("src", element.link);
+              details.setAttribute("type", "button");
+              details.setAttribute("data-bs-toggle","modal")
+              details.setAttribute("data-bs-target","#informacion")
+              details.setAttribute("value", element.id)
+              details.innerText= "ver perfil";
+              card_body.appendChild(details);
+                          
+              details.addEventListener("click", function () {
+                  coderDetails(element.id);
+      
+                  let nameModal = document.getElementById('nameModal');
+                  nameModal.classList.add("fs-2", "text-center")
+                  nameModal.innerText = element.name + " " + element.lastname;
+      
+                  let emailModal = document.getElementById('emailModal');
+                  emailModal.innerText = `Correo: ${element.email}`;
+                              
+                  let phoneModal = document.getElementById('phoneNumber');
+                  phoneModal.innerText = `Celular: ${element.phone}`;  
+                              
+                  let skillsModal = document.getElementById('skills');
+                  skillsModal.innerText = `Habilidades en: ${element.skill1}, ${element.skill2}, ${element.skill3}, ${element.skill4}`;  
+      
+                  let lang = document.getElementById('lang');
+                  lang.innerText = `Idiomas: ${element.lang}`; 
+      
+                  let portfolio = document.getElementById('portfolio');
+                  portfolio.classList.add("font-weight-bold")
+                  portfolio.innerText = `Portafolio: ${element.link}`; 
+              });      
+          })
+      } 
+    }else if(filtro == 2){
+      if(element.age >= 25 && element.age<=35){
+         data.push(element);
+         document.getElementById("root").innerHTML = "";
+         data.forEach(function(element) {
+   
+             let col = document.createElement('div');
+             col.classList.add("col-md-3");
+             root.appendChild(col)
+     
+             let card = document.createElement("div");
+             card.classList.add("card", "text-center");
+             card.setAttribute('style', "width: 18rem");
+             col.appendChild(card);
+     
+             let img = document.createElement("img");
+             img.classList.add('card-img-top', 'img-fluid', "mx-auto","d-block", "mt-3");
+             img.setAttribute('src' , element.img );
+             card.appendChild(img);
+     
+             let nombre = document.createElement("h4");
+             nombre.innerText= element.name + " " +element.lastname;
+             nombre.classList.add("title-text", "text-center", "mt-3", "mb-3")
+             card.appendChild(nombre);
+             nombre.setAttribute('id' , element.id);
+             card.appendChild(nombre);
+     
+             let skill1 = document.createElement("button");
+             skill1.classList.add("badge",  'text-bg', "skill1", "mx-auto");
+             skill1.innerText= element.skill1;
+             card.appendChild(skill1);
+     
+             let card_body = document.createElement("div");
+             card_body.classList.add("card-body");
+             card.appendChild(card_body);              
+                         
+             let skill2 = document.createElement("button");
+             skill2.classList.add("badge", 'text-bg-1', "mb-3");
+             skill2.innerText= element.skill2;
+             card_body.appendChild(skill2);
+                         
+             let skill3 = document.createElement("button");
+             skill3.classList.add("badge", 'text-bg-1', "mb-3");
+             skill3.innerText= element.skill3;
+             card_body.appendChild(skill3);
+     
+             let skill4 = document.createElement("button");
+             skill4.classList.add("badge", 'text-bg-1', "mb-3");
+             skill4.innerText= element.skill4;
+             card_body.appendChild(skill4);
+     
+             let details = document.createElement("button");
+             details.classList.add("btn", "btn-primary");
+             details.setAttribute("src", element.link);
+             details.setAttribute("type", "button");
+             details.setAttribute("data-bs-toggle","modal")
+             details.setAttribute("data-bs-target","#informacion")
+             details.setAttribute("value", element.id)
+             details.innerText= "ver perfil";
+             card_body.appendChild(details);
+                         
+             details.addEventListener("click", function () {
+                 coderDetails(element.id);
+     
+                 let nameModal = document.getElementById('nameModal');
+                 nameModal.classList.add("fs-2", "text-center")
+                 nameModal.innerText = element.name + " " + element.lastname;
+     
+                 let emailModal = document.getElementById('emailModal');
+                 emailModal.innerText = `Correo: ${element.email}`;
+                             
+                 let phoneModal = document.getElementById('phoneNumber');
+                 phoneModal.innerText = `Celular: ${element.phone}`;  
+                             
+                 let skillsModal = document.getElementById('skills');
+                 skillsModal.innerText = `Habilidades en: ${element.skill1}, ${element.skill2}, ${element.skill3}, ${element.skill4}`;  
+     
+                 let lang = document.getElementById('lang');
+                 lang.innerText = `Idiomas: ${element.lang}`; 
+     
+                 let portfolio = document.getElementById('portfolio');
+                 portfolio.classList.add("font-weight-bold")
+                 portfolio.innerText = `Portafolio: ${element.link}`; 
+             });      
+         })
+      } 
+    }else if(filtro == 3){
+      if(element.age >= 35 ){
+         data.push(element);
+         document.getElementById("root").innerHTML = "";
+         data.forEach(function(element) {
+   
+             let col = document.createElement('div');
+             col.classList.add("col-md-3");
+             root.appendChild(col)
+     
+             let card = document.createElement("div");
+             card.classList.add("card", "text-center");
+             card.setAttribute('style', "width: 18rem");
+             col.appendChild(card);
+     
+             let img = document.createElement("img");
+             img.classList.add('card-img-top', 'img-fluid', "mx-auto","d-block", "mt-3");
+             img.setAttribute('src' , element.img );
+             card.appendChild(img);
+     
+             let nombre = document.createElement("h4");
+             nombre.innerText= element.name + " " +element.lastname;
+             nombre.classList.add("title-text", "text-center", "mt-3", "mb-3")
+             card.appendChild(nombre);
+             nombre.setAttribute('id' , element.id);
+             card.appendChild(nombre);
+     
+             let skill1 = document.createElement("button");
+             skill1.classList.add("badge",  'text-bg', "skill1", "mx-auto");
+             skill1.innerText= element.skill1;
+             card.appendChild(skill1);
+     
+             let card_body = document.createElement("div");
+             card_body.classList.add("card-body");
+             card.appendChild(card_body);              
+                         
+             let skill2 = document.createElement("button");
+             skill2.classList.add("badge", 'text-bg-1', "mb-3");
+             skill2.innerText= element.skill2;
+             card_body.appendChild(skill2);
+                         
+             let skill3 = document.createElement("button");
+             skill3.classList.add("badge", 'text-bg-1', "mb-3");
+             skill3.innerText= element.skill3;
+             card_body.appendChild(skill3);
+     
+             let skill4 = document.createElement("button");
+             skill4.classList.add("badge", 'text-bg-1', "mb-3");
+             skill4.innerText= element.skill4;
+             card_body.appendChild(skill4);
+     
+             let details = document.createElement("button");
+             details.classList.add("btn", "btn-primary");
+             details.setAttribute("src", element.link);
+             details.setAttribute("type", "button");
+             details.setAttribute("data-bs-toggle","modal")
+             details.setAttribute("data-bs-target","#informacion")
+             details.setAttribute("value", element.id)
+             details.innerText= "ver perfil";
+             card_body.appendChild(details);
+                         
+             details.addEventListener("click", function () {
+                 coderDetails(element.id);
+     
+                 let nameModal = document.getElementById('nameModal');
+                 nameModal.classList.add("fs-2", "text-center")
+                 nameModal.innerText = element.name + " " + element.lastname;
+     
+                 let emailModal = document.getElementById('emailModal');
+                 emailModal.innerText = `Correo: ${element.email}`;
+                             
+                 let phoneModal = document.getElementById('phoneNumber');
+                 phoneModal.innerText = `Celular: ${element.phone}`;  
+                             
+                 let skillsModal = document.getElementById('skills');
+                 skillsModal.innerText = `Habilidades en: ${element.skill1}, ${element.skill2}, ${element.skill3}, ${element.skill4}`;  
+     
+                 let lang = document.getElementById('lang');
+                 lang.innerText = `Idiomas: ${element.lang}`; 
+     
+                 let portfolio = document.getElementById('portfolio');
+                 portfolio.classList.add("font-weight-bold")
+                 portfolio.innerText = `Portafolio: ${element.link}`; 
+             });      
+         })
+      } 
+    }
+  });
+   
+     
+  });
+  }
 
         
