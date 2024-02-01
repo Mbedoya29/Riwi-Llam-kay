@@ -15,10 +15,6 @@
     width: 100%;
     max-width: 100%;
 }
-.login{
-    text-decoration: none;
-    color: black;
-}
 .dropdown{
     margin-right: 15px;
 }
@@ -35,6 +31,11 @@
     margin-right: 10px;
     padding: 2px;
     color: #5E80A9;
+}
+.btn-login{
+    background-color: #71D980!important;
+    color: white!important;
+
 }
 /*_______________________/HEADER________________________*/
 
