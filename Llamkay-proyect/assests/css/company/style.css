@@ -40,48 +40,43 @@
     padding: 2px;
     color: #5E80A9;
 }
-
-
 .filtre{
     margin-top: 140px;
 }
-
-
+.form-select{
+    background-color: #6816DC!important;
+    color: white!important;
+    width: 200px!important;
+    margin-right: 21px!important;
+}
 .root{
     margin-top: 30px;
 }
-
 .card{
     margin-left: 20px;
     margin-top: 20px;
 }
-
 .card-img-top{
     width: 140px!important;
 }
-
-
-
 .skill1{
     width: 120px;
     height: 30px;
 }
-
 .btn{
     background-color: #6816DC!important;
     border-color: #6816DC!important;
 }
-
 .badge{
     background-color: #71D980!important;
     border-color: #71D980!important;
     margin-left: 5px;
 }
-
 .text-bg-1{
     background-color: #acacac!important;
     border-color: #bdbdbd!important;
 }
+/*_______________________/HEADER________________________*/
 
 /*________________________FOOTER________________________*/
 .footer{
