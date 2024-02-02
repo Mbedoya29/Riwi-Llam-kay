@@ -84,7 +84,7 @@ function showCoders(data){
             coderDetails(element.id);
 
             let nameModal = document.getElementById('nameModal');
-            nameModal.classList.add("fs-2", "text-center")
+            nameModal.classList.add("fs-2", "text-center", "nameCoder")
             nameModal.innerText = element.name + " " + element.lastname;
 
             let emailModal = document.getElementById('emailModal');
@@ -98,6 +98,9 @@ function showCoders(data){
 
             let lang = document.getElementById('lang');
             lang.innerText = `Idiomas: ${element.lang}`; 
+
+            let englishLevel = document.getElementById('englishLevel')
+            englishLevel.innerText = `Nivel de ingles: ${element.englishLevel}`
 
             let portfolio = document.getElementById('portfolio');
             portfolio.classList.add("font-weight-bold")
@@ -150,7 +153,7 @@ function maleGender(){
 //______________Filtro A1_______________
 function levelA1(){
     document.getElementById("root").innerHTML = "";
-    fetch(`http://localhost:3000/coders?english-level=A1`, {
+    fetch(`http://localhost:3000/coders?englishLevel=A1`, {
       method: "GET",
     })
       .then((result) => {return result.json()
@@ -162,7 +165,7 @@ function levelA1(){
 //______________Filtro A2_______________
 function levelA2(){
     document.getElementById("root").innerHTML = "";
-    fetch(`http://localhost:3000/coders?english-level=A2`, {
+    fetch(`http://localhost:3000/coders?englishLevel=A2`, {
       method: "GET",
     })
       .then((result) => {return result.json()
@@ -174,7 +177,7 @@ function levelA2(){
 //______________Filtro B1_______________
 function levelB1(){
     document.getElementById("root").innerHTML = "";
-    fetch(`http://localhost:3000/coders?english-level=B1`, {
+    fetch(`http://localhost:3000/coders?englishLevel=B1`, {
       method: "GET",
     })
       .then((result) => {return result.json()
@@ -186,7 +189,7 @@ function levelB1(){
 //______________Filtro B2_______________
 function levelB2(){
     document.getElementById("root").innerHTML = "";
-    fetch(`http://localhost:3000/coders?english-level=B2`, {
+    fetch(`http://localhost:3000/coders?englishLevel=B2`, {
       method: "GET",
     })
       .then((result) => {return result.json()
@@ -198,7 +201,7 @@ function levelB2(){
 //______________Filtro C1_______________
 function levelC1(){
     document.getElementById("root").innerHTML = "";
-    fetch(`http://localhost:3000/coders?english-level=C1`, {
+    fetch(`http://localhost:3000/coders?englishLevel=C1`, {
       method: "GET",
     })
       .then((result) => {return result.json()
@@ -210,7 +213,7 @@ function levelC1(){
 //______________Filtro C2_______________
 function levelC2(){
     document.getElementById("root").innerHTML = "";
-    fetch(`http://localhost:3000/coders?english-level=C2`, {
+    fetch(`http://localhost:3000/coders?englishLevel=C2`, {
       method: "GET",
     })
       .then((result) => {return result.json()
