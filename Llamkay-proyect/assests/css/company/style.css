@@ -74,7 +74,14 @@
     background-color: #acacac!important;
     border-color: #bdbdbd!important;
 }
+.btn-login{
+    background-color: #71D980!important;
+    color: white!important;
+    border-color: #71D980!important;
+
+}
 /*_______________________/HEADER________________________*/
+
 /*________________________FOOTER________________________*/
 .footer{
     background-color: #f8f9fa;
