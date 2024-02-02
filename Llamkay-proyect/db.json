@@ -14,7 +14,7 @@
     "skill3": "javascript",
     "skill4": "python",
     "lang": "ingles",
-    "english-level":"A1",
+    "englishLevel":"A1",
     "link": ""
  },
  { 
@@ -31,7 +31,7 @@
     "skill3": "javascript",
     "skill4": "python",
     "lang": "ingles",
-    "english-level":"A2",
+    "englishLevel":"A2",
     "link": "https://mbedoya29.github.io/Proyectos-Riwi/"
   },
  { 
@@ -48,7 +48,7 @@
     "skill3": "javascript",
     "skill4": "python",
     "lang": "ingles",
-    "english-level":"B1",
+    "englishLevel":"B1",
     "link": ""
  },
  { 
@@ -65,7 +65,7 @@
     "skill3": "javascript",
     "skill4": "python",
     "lang": "ingles",
-    "english-level":"B2",
+    "englishLevel":"B2",
     "link": ""
  },
  { 
@@ -82,7 +82,7 @@
   "skill3": "javascript",
   "skill4": "python",
   "lang": "ingles",
-  "english-level":"C1",
+  "englishLevel":"C1",
   "link": ""
   },
   { 
@@ -99,7 +99,7 @@
     "skill3": "react",
     "skill4": "java",
     "lang": "ingles",
-    "english-level":"C2",
+    "englishLevel":"C2",
     "link": ""
   },
   { 
@@ -116,7 +116,7 @@
     "skill3": ".NET",
     "skill4": "java",
     "lang": "ingles",
-    "english-level":"A1",
+    "englishLevel":"A1",
     "link": ""
   },
   { 
@@ -133,7 +133,7 @@
     "skill3": "React",
     "skill4": "java",
     "lang": "ingles",
-    "english-level":"A1",
+    "englishLevel":"A1",
     "link": ""
   }
 ]
