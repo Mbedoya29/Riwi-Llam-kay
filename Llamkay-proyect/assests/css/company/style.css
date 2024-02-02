@@ -38,6 +38,9 @@
     padding: 2px;
     color: #5E80A9;
 }
+/*_______________________/HEADER________________________*/
+
+/*_________________________BODY_________________________*/
 .filtre{
     margin-top: 140px;
 }
@@ -74,13 +77,15 @@
     background-color: #acacac!important;
     border-color: #bdbdbd!important;
 }
+.modal-title{
+    color: #6816DC;
+}
 .btn-login{
     background-color: #71D980!important;
     color: white!important;
     border-color: #71D980!important;
-
 }
-/*_______________________/HEADER________________________*/
+/*_________________________BODY_________________________*/
 
 /*________________________FOOTER________________________*/
 .footer{
