@@ -66,7 +66,7 @@ function showCoders(data){
         card_body.appendChild(skill3);
 
         let skill4 = document.createElement("button");
-        skill4.classList.add("badge", 'text-bg-1', "mb-3");
+        skill4.classList.add("badge", 'text-bg-1', "mb-3", "me-3");
         skill4.innerText= element.skill4;
         card_body.appendChild(skill4);
 
@@ -287,4 +287,72 @@ function filterAge(){
       }
     });
   });
+}
+//________________Lenguajes________________
+function filtreSkills(){
+  let lenguajes = document.getElementById("languages").value
+  data = [];
+  document.getElementById("root").innerHTML = "";
+  fetch(`http://localhost:3000/coders`).then(r => r.json()).then(coders=> {
+
+    coders.forEach(function(element){
+      if(lenguajes == 4){
+        if(element.skill2 == "python" || element.skill3 == "python" || element.skill4 == "python"){
+          data.push(element);
+          document.getElementById("root").innerHTML = "";
+          console.log(data)
+          showCoders(data)
+        }
+      }else if(lenguajes == 5){
+        if(element.skill2 == "JavaScript" || element.skill3 == "JavaScript" || element.skill4 == "JavaScript"){
+          data.push(element);
+          document.getElementById("root").innerHTML = "";
+        
+          showCoders(data)
+        }
+      }else if(lenguajes == 6){
+        if(element.skill2 == "SQL" || element.skill3 == "SQL" || element.skill4 == "SQL"){
+          data.push(element);
+          document.getElementById("root").innerHTML = "";
+        
+          showCoders(data)
+        }
+      }else if(lenguajes == 7){
+        if(element.skill2 == "Java" || element.skill3 == "Java" || element.skill4 == "Java"){
+          data.push(element);
+          document.getElementById("root").innerHTML = "";
+        
+          showCoders(data)
+        }
+      }else if(lenguajes == 8){
+        if(element.skill2 == "C#" || element.skill3 == "C#" || element.skill4 == "C#"){
+          data.push(element);
+          document.getElementById("root").innerHTML = "";
+        
+          showCoders(data)
+        }
+      }else if(lenguajes == 9){
+        if(element.skill2 == ".NET" || element.skill3 == ".NET" || element.skill4 == ".NET"){
+          data.push(element);
+          document.getElementById("root").innerHTML = "";
+        
+          showCoders(data)
+        }
+      }else if(lenguajes == 10){
+        if(element.skill2 == "PHP" || element.skill3 == "PHP" || element.skill4 == "PHP"){
+          data.push(element);
+          document.getElementById("root").innerHTML = "";
+        
+          showCoders(data)
+        }
+      }else if(lenguajes == 11){
+        if(element.skill2 == "React" || element.skill3 == "React" || element.skill4 == "React"){
+          data.push(element);
+          document.getElementById("root").innerHTML = "";
+        
+          showCoders(data)
+        }
+      }
+    })
+  })
 }
