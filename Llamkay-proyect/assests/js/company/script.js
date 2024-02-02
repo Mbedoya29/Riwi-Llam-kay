@@ -1,3 +1,8 @@
+//_______________Translate________________
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: ',en,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true}, 'google_translate_element');
+}
+//_________________Theme__________________
 function changeTheme(param){
   let color = document.getElementById('theme-body');
   if (param == "dark"){
@@ -16,7 +21,7 @@ function changeTheme(param){
       document.getElementById('footer').classList.add('light')
   }
 }
-
+//____________Mostrar coders____________ 
 function showCoders(data){
   data.forEach(function(element){
         
@@ -97,13 +102,10 @@ function showCoders(data){
             let portfolio = document.getElementById('portfolio');
             portfolio.classList.add("font-weight-bold")
             portfolio.innerText = `Portafolio: ${element.link}`; 
-
         });
 })
 }
-
-//________________listar________________
-        
+//________________listar________________       
 var root = document.getElementById("root");
 
     fetch("http://localhost:3000/coders")
@@ -112,7 +114,6 @@ var root = document.getElementById("root");
     }).then(data => {
       showCoders(data)
 })
-
 //_______________Detalles______________
 function coderDetails(id) {
     fetch(`http://localhost:3000/coders/${id}`, {
@@ -122,7 +123,6 @@ function coderDetails(id) {
       .then((res) => console.log(res))
       .catch((err) => console.log(err))
 }
-
 //___________Filtro Femenino___________
 function femaleGender(){
     document.getElementById("root").innerHTML = "";
@@ -135,7 +135,6 @@ function femaleGender(){
         showCoders(data)
     )) 
 }
-
 //___________Filtro Masculino___________
 function maleGender(){
     document.getElementById("root").innerHTML = "";
@@ -256,7 +255,8 @@ function fullStack(){
       showCoders(data)
   )) 
 }
-function edadfiltro(){
+//__________________Edad___________________
+function filterAge(){
   let filtro  = document.getElementById("edad").value
   data = [];
   document.getElementById("root").innerHTML = "";
@@ -287,4 +287,4 @@ function edadfiltro(){
       }
     });
   });
-}        
+}
