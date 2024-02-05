@@ -1,4 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
 /*_________________________HEAD_________________________*/
+
 .favicon{
     width: 130px;
     height: 75px;
@@ -47,6 +53,7 @@
     left: 0;
     width: 100%;
     max-width: 100%;
+    max-height: 90%!important;
 }
 /*______________________/CAROUSEL_______________________*/
 
@@ -65,14 +72,34 @@
     margin-top: 30px;
     border-radius: 5%;
 }
+.mapa{
+    align-items: center;
+}
 /*_________________________BODY_________________________*/
 
+/*_______________________ARROW UP_______________________*/
+.arrowUp{
+    float: right;
+    scroll-behavior: smooth;
+    margin-right: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 25px;
+    color: white!important;
+    background-color: #6816DC;   
+}
+/*______________________/ARROW UP_______________________*/
 
 /*________________________FOOTER________________________*/
 .footer{
     background-color: #f8f9fa;
     padding: 40px;
     margin-top: 80px;
+}
+.section-footer{
+    align-content: center;
 }
 .text-footer{
     margin-top: 20px;
