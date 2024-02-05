@@ -62,29 +62,29 @@
     <!--_______________________________________/HEADER________________________________________-->
 
     <!--_______________________________________CAROUSEL_______________________________________-->
-    <div id="carouselExampleIndicators" class="carousel slide">
+
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="./assests/images/banner.png" class="d-block w-100" alt="...">
+        <div class="carousel-item active" data-bs-interval="2400">
+          <img src="./assests/images/carrousel1.jpg" class="d-block w-100" alt="...">
         </div>
-        <div class="carousel-item">
-          <img src="./assests/images/Banner2.png" class="d-block w-100" alt="...">
+        <div class="carousel-item" data-bs-interval="2400">
+          <img src="./assests/images/carrousel2.jpg" class="d-block w-100" alt="...">
         </div>
-        <div class="carousel-item">
-          <img src="./assests/images/Banner3.png" class="d-block w-100" alt="...">
+        <div class="carousel-item" data-bs-interval="2400">
+          <img src="./assests/images/carrousel3.jpg" class="d-block w-100" alt="...">
         </div>
       </div>
-      
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
@@ -129,7 +129,6 @@
         </div>
       </center>
       <!--/CARDS-->
-
       <!--MAP-->
         <center>
         <div class="col-md-12">
@@ -138,9 +137,15 @@
         </div>
       </center>
       <!--/MAP-->
-
       </div>
     </div>
+  <!--ARROW UP-->
+  <button class="arrowUp">
+    <a href="#theme-body">
+      <i class="fa-solid fa-arrow-up" style="color: white;"></i>
+    </a>
+  </button>
+  <!--/ARROW UP-->
     <!--________________________________________/BODY_________________________________________-->
 
     <!--________________________________________FOOTER________________________________________-->
@@ -168,18 +173,17 @@
                123-456-7890</p>
           </div>
 
+
           <div class="col-lg-3 section-footer">
-          <center>
             <h3 class="subtitles-footer">Redes sociales</h3>
             <p>
-              <a href="https://www.facebook.com/people/Riwi/100092420949391/?locale=es_LA"><i class="fa-brands fa-square-facebook icons"></i></a>
+              <a target="_blank" href="https://www.facebook.com/people/Riwi/100092420949391/?locale=es_LA"><i class="fa-brands fa-square-facebook icons"></i></a>
             
-              <a href="https://www.instagram.com/riwi.io/"><i class="fa-brands fa-square-instagram icons"></i></a>
+              <a target="_blank" href="https://www.instagram.com/riwi.io/"><i class="fa-brands fa-square-instagram icons"></i></a>
               
-              <a href="https://www.linkedin.com/company/riwi-io"><i class="fa-brands fa-linkedin icons"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/company/riwi-io"><i class="fa-brands fa-linkedin icons"></i></a>
             </p>
           </div>
-        </center>
         </div>
       </div>
     </footer>
