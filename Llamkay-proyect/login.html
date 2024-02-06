@@ -3,108 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Login </title> 
+    <title> <//amka'y> </title> 
+    <link rel="shortcut icon" href="./assests/images/web-icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assests/css/login/style2.css">
-    <link rel="shortcut icon" href="./assests/images/isotipo.png">
+    <link rel="stylesheet" href=".//assests/css/login/style2.css">
+
 </head>
 <body> 
-    <!--<div class="forms-container">
-        --sección de registro--
-        <div class="signup">
-            <form action="#" class="sign-up-form">
-                <h2 class="title">Registrarse</h2>
-                <div class="input-field">
-                    <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Usuario">
-                </div>
-                <div class="input-field">
-                    <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="Correo Electronico">
-                </div>
-                <div class="input-field">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Contraseña">
-                </div>
-                <div class="input-field">
-                    <i class="fa-solid fa-user-pen"></i>
-                        <select id="" class="type-acount">
-                            <option value="#" selected="" disabled="" class="option">Tipo de cuenta</option>
-                            <option value="developer" class="option">Desarrollador</option>
-                            <option value="company" class="option">Empresa</option>
-                        </select>
-                </div>
-                <input type="submit" value="Ingresar" class="btn solid">
-            </form>
-        </div>
-        --Sección de Inicio de sesion--
-        <div class="signin">
-            <form action="#" class="sign-in-form">
-                <h2 class="title">Iniciar Sesión</h2>
-                <div class="input-field">
-                    <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Usuario">
-                </div>
-                <div class="input-field">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Contraseña">
-                </div>
-                <input type="submit" value="Ingresar" class="btn solid">
-            </form>
-        </div>
-    </div>
-    --Cortina de transición--
-    <div class="overlay-container">
-        --Cortina Izquierda--
-        <div class="overlay">
-            <div class="overlay-left">
-                <h1>
-                    ¡Bienvenido de nuevo! Ingresa tus datos para acceder.
-                </h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                <button id="signin">sign In</button>
-            </div>
-        </div>
-        --Cortina Derecha--
-        <div class="overlay-right">
-            <h1>
-                Únete a nuestra plataforma. Regístrate aquí.
-            </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-            <button id="signup">sign Up</button>
-        </div>
-    </div> -->
     <div class="container" id="container">
-        <!--Apartado de Registro-->
+        <!-- ____________SignUp Section____________ -->
         <div class="form-container sign-up">
-            <form>
+            <img src="./assests/images/web-icon" alt="" srcset="">
+            <form id="form_newAcount">
                 <h1>Crear cuenta nueva</h1>
                 <div class="input-field">
-                    <input type="text" placeholder="Usuario" id="user">
-                    <input type="email" placeholder="Correo Electronico" id="email">
-                    <input type="password" placeholder="Contraseña" id="password">
+                    <input type="text" placeholder="Usuario" id="new_username">
+                    <input type="email" placeholder="Correo Electronico" id="new_email">
+                    <input type="password" placeholder="Contraseña" id="new_pass" name="pass">
                     <div class="input-field">
-                            <select id="type-acount" class="type-acount">
+                            <select id="type_acount" class="type_acount">
                                 <option value="#" selected="" disabled="" class="option">Tipo de cuenta</option>
-                                <option value="developer" class="option">Desarrollador</option>
-                                <option value="company" class="option">Empresa</option>
+                                <option value="0" class="option">Desarrollador</option>
+                                <option value="1" class="option">Empresa</option> 
                             </select>
                     </div>
                 </div> 
-                <button>Crear</button>
+                <button type="button" id="sign_up_button" onclick="nuevo_usuario()">Crear nueva cuenta</button>
             </form>
         </div>
-        <!--Apartado de Inicio Sesion-->
+        <!-- ____________/SignUp Section____________ -->
+        <!--_____________Login Section_____________-->
         <div class="form-container sign-in">
             <form>
                 <h1>Inicio de Sesión</h1>
                 <div class="input-field">
-                    <input type="text" placeholder="Usuario">
-                    <input type="password" placeholder="Contraseña">
+                    <div class="input-field">
+                        <select id="type_acount_login" class="type-acount" id="type_acount_login"> <!--Se le asigna un valor a cada seleccion para distinguir en json el tipo de cuenta-->
+                            <option value="#" selected="" disabled="" class="option">Tipo de cuenta</option>
+                            <option value="0" class="option">Desarrollador</option>
+                            <option value="1" class="option">Empresa</option> 
+                        </select>
+                    </div>
+                    <input type="text" placeholder="Usuario" id="user_login">
+                    <input type="password" placeholder="Contraseña" id="pass_login">
                 </div>
-                <button>Ingresar</button>
+                <button  type="button" id="login_btn" onclick="autenticador()">Ingresar</button>
             </form>
         </div>
+        <!--_____________/Login Section_____________-->
+
+        <!--_____________Layer field Section_____________-->
         <div class="toggle-container">
             <div class="toggle">
                 <div class="toggle-panel toggle-left">
@@ -123,6 +71,8 @@
                 </div>
             </div>
         </div>
+        <!--_____________/Layer field Section_____________-->
+
     </div>
     <script src="./assests/js/login/animation.js"></script>
     <script src="./assests/js/login/app.js"></script>
