@@ -1,131 +1,182 @@
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body{
-    align-items: center;
+    background-color: antiquewhite;
+    background: linear-gradient(grey, purple);
     display: flex;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: aliceblue;
-    font-family: 'Courier New', Courier, monospace;
-    min-height: 100%;
-    margin: 10%;
+    height: 100vh;
 }
 
-.forms-container{
+.container{
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, blue, alpha);
     position: relative;
+    overflow: hidden;
     width: 768px;
     max-width: 100%;
-    max-height: 480px;
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
-                0 10px 10px rgba(0,0,0,0.22);
+    min-height: 480px;
 }
 
-.signup , .signin{
+.container p{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+.container button{
+
+    background-color: #350E84;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid  transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.container  button .hidden{
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.container form{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.container input, select{
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.form-container{
     position: absolute;
     top: 0;
-    left: 0;
     height: 100%;
     transition: all 0.6s ease-in-out;
 }
 
-.signup{
-    width: 50%;
-    opacity: 0;
-    z-index: 1;
-}
-
-.signin{
+.sign-in{
+    left: 0;
     width: 50%;
     z-index: 2;
 }
 
-form{
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 50px;
-    height: 100%;
-    text-align: center;
-}
-
-h1{
-    font-weight: bold;
-    margin: 0;
-}
-
-p{
-    font-size: 14px;
-    font-weight: 100;
-    letter-spacing: 0.5px;
-    margin: 15px 0 20px;
-}
-
-input{
-    background: #eee;
-    padding: 12px 15px;
-    margin: 8px 15px;
-    width: 100%;
-    border-radius: 5px;
-    width: 100%;
-    border:none;
-    outline: none;
-}
-
-a{
-    color: #333;
-    font-size: 14px;
-    text-decoration: none;
-    margin: 15px 0;
-}
-
-button{
-    color: #fff;
-    background-color: aqua;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 12px 15px;
-    margin: 20px;
-    border-radius: 20px;
-    border: 1px solid #ff4b2b;
-    outline: none;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: transform 80msº ease-in;
-    cursor: pointer;
-}
-
-button:active{
-    transform: scale(0.90);
-}
-
-#signin, #signup{
-    background-color: transparent;
-    border: 2px solid #fff;
-}
-
-.forms-container.right-panel-active .signin{
+.container .active .sign-in{
     transform: translateX(100%);
 }
 
-.forms-container .left-panel-active .signup{
+.sign-up{
+    left: 0;
+    width: 50%;
+    z-index: 1;
+}
+
+.container.active .sign-up{
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
+    animation: move 0.6s;
 }
 
-.overlay-container{
-    position: absolute;
+@keyframes move{
+    0% 49.99%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50% 100%{
+        opacity: 1;
+        z-index: 5;
+    }}
+
+.toggle-container{
+    position:absolute;
     top: 0;
     left: 50%;
     width: 50%;
     height: 100%;
     overflow: hidden;
-    transition: transform 0.6s;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
 }
+
+.container.active .toggle-container{
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.toggle{
+    background-color: #350E84;
+    height: 100%;
+    background: linear-gradient(to right, #350E84, #512da8);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.container.active .toggle{
+    transform: translateX(50%);
+}
+
+.toggle-panel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-left{
+    transform: translateX(-200%);
+}
+
+.container.active .toggle-left{
+    transform: translateX(0);
+}
+
+.toggle-right{
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.active .toggle-right{
+    transform: translateX(200%);
+}
+
