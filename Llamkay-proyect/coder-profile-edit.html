@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assests/images/isotipo.png">
+    <link rel="stylesheet" href=".//assests/css/coder-profile/style_coderprofile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="./assests/js/coder-profile-edit/app.js"></script>
+    <title>Mi perfil</title>
+</head>
+<body>
+    <div class="container">
+        <!--__________ Header __________-->
+        <div class="field_header">
+            <header>
+                <nav class="nav">
+                    <ul class="nav_list">
+                        <div>
+                            <li>
+                                <img src="./assests/images/logotipo.png" alt="" class="nav_icon">
+                            </li>
+                        </div>
+                        <div class="button_container">
+                            <li class="li_button">
+                                <button type="button" class="save_data nav_button" id="save_data"onclick="save_data()">guardar</button>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <!--__________ Main __________-->
+        <div class="field_profile ">
+            <form action="">
+                <div class="field-coder-img"> <!--Campo foto de perfil -->
+                    <img src="https://i.pinimg.com/736x/92/26/d7/9226d738bb7e00aa1bff0b73b786ae00.jpg" alt="" id="img_profile" class="img_profile">
+                    <input type="text" placeholder="Link nueva imagen de perfil">
+                </div>
+                <div class="field-coder-username"> <!--campo de Nickname-->
+                    <h2 class="coder-username" id="nickname"></h2>
+                </div>
+            </form>
+                <div class="field-coder-details card"> <!--Campo de Detalles-->
+                    <h2 class="title title-details">
+                        Detalles del usuario
+                    </h2>
+                    <ul class="list-details list-card">
+                        <li class="list-element">
+                            <p id="name">
+                                <strong class="subtitle">Nombre: </strong>
+                                <input type="text" class="name" id="name">
+                            </p>
+                        </li>
+                        <li class="list-element ">
+                            <strong class="subtitle">Apellido: </strong>
+                            <input type="text" name="" class="lastname" id="lastname">
+                        </li>
+                        <li class="list-element">
+                            <strong class="subtitle">Genero: </strong>
+                            <select name="" id="">
+                                <option value="" selected="" disabled=""></option>
+                            <option value="mas">Masculino</option>
+                            <option value="fem">Femenino</option>
+                            <option value="otr">Otro</option>
+                        </select>
+                    </li>
+                    <li class="list-element">
+                            <strong class="subtitle">Edad: </strong>
+                            <input type="number" id="age">
+                    </li>
+                </ul>
+            </div>
+            <div class="field-coder-skill card"> <!--Campo de Habilidades-->
+                <h2 class="title title-skill">
+                    Habilidades en Desarrollo
+                </h2>
+                <ul class="list-skill list-card">
+                    <li class="list-element">
+                        <strong class="subtitle">Habilidad #1 : </strong>
+                        <select name="" id="skill1">
+                            <option value="b">Back-end</option>
+                            <option value="f">Front-end</option>
+                            <option value="s">Full-stack</option>
+                            <option value="d">BigData</option>
+                        </select>
+                    </li>
+                    <li class="list-element">
+                        <strong class="subtitle">Habilidad #2 : </strong>
+                        <select name="" id="skill2">
+                            <option value="html">html</option>
+                            <option value="Css">Css</option>
+                            <option value="Python">Python</option>
+                            <option value="Sql">Sql</option>
+                            <option value="c+">c++</option>
+                            <option value="php">php</option>
+                        </select>
+                    </li>
+                    <li class="list-element">
+                        <strong class="subtitle">Habilidad #3 : </strong>
+                        <select name="" id="skill3">
+                            <option value="html">html</option>
+                            <option value="Css">Css</option>
+                            <option value="Python">Python</option>
+                            <option value="Sql">Sql</option>
+                            <option value="c+">c++</option>
+                            <option value="php">php</option>
+                        </select>
+                    </li>
+                    <li class="list-element">
+                        <strong class="subtitle">Habilidad #4 : </strong>
+                        <select name="" id="skill4">
+                            <option value="html">html</option>
+                            <option value="Css">Css</option>
+                            <option value="Python">Python</option>
+                            <option value="Sql">Sql</option>
+                            <option value="c+">c++</option>
+                            <option value="php">php</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+            <div class="field-coder-contact card"> <!--Campo de Contacto-->
+                <h2 class="title tittle-contact">
+                    Informacion de contacto
+                </h2>
+                <ul class="list-contact list-card">
+                    <li class="list-element">
+                            <strong class="subtitle">Email: </strong>
+                            <input type="text" placeholder="correo@email.com" class="email" id="email">
+                    </li>
+                    <li class="list-element">
+                        <strong class="subtitle">Celular: </strong>
+                        <input type="text" placeholder="1111-222-33-44" class="" id="">
+                    </li>
+                </ul>
+            </div>
+            <div class="field-coder-lenguages card"> <!--Campo de Idiomas-->
+                <h2 class="title title-lenguages">
+                    Idiomas
+                </h2>
+                <ul class="list-lenguages list-card">
+                    <li>
+                        <strong class="subtitle">Segundo idioma: </strong>
+                        <select id="lag" class="lang">
+                            <option value="#" selected="" disabled="" class="option">Selecciona</option>
+                            <option value="in" class="option">Ingles</option>
+                            <option value="fr" class="option">Frances</option> 
+                            <option value="po" class="option">portugues</option>
+                        </select>
+                    </li>
+                    <li> 
+                        <strong class="subtitle">Nivel de Idioma: </strong>   
+                        <select id="english-level" class="english-level">
+                            <option value="#" selected="" disabled="" class="option">Selecciona </option>
+                            <option value="a1" class="option">A1</option>
+                            <option value="a2" class="option">A2</option> 
+                            <option value="b1" class="option">B1</option> 
+                            <option value="b2" class="option">B2</option> 
+                            <option value="c1" class="option">C1</option> 
+                        </select>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--__________ Footer __________-->
+        <div class="field_footer">
+            <footer class="footer" id="footer">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-5">
+                      <img src="./assests/images/isotipo.png" alt="">
+                      <p class="fs-5 text-footer">Facilitamos la conexión entre individuos talentosos y empresas que buscan fortalecer sus equipos de desarrollo.
+                      </p>
+                    </div>
+                    <div class="col-lg-4">
+                      <h3 class="subtitles-footer">Contacto</h3>
+                      <p class="fs-5"> 
+                        <a href="https://www.google.com/maps/place/De+Moda+Outlet/@6.2193831,-75.5859495,17z/data=!3m1!4b1!4m6!3m5!1s0x8e4429e1dab04e05:0x5a77c25c8a5faf3a!8m2!3d6.2193831!4d-75.5833746!16s%2Fg%2F11gv_xr9wj?entry=ttu"><i class="fa-solid fa-location-dot icons-contact"></i></a>
+                        Cl. 16 #55-129, Guayabal, Medellín CC. De Moda Outlet, piso 3</p>
+                      <p class="fs-5">
+                        <i class="fa-solid fa-envelope icons-contact"></i>
+                        riwi.Llamk'ay@gmail.com</p>
+                      <p class="fs-5">
+                        <i class="fa-solid fa-phone icons-contact"></i>
+                         123-456-7890</p>
+                    </div>
+                    <div class="col-lg-3 section-footer">
+                      <h3 class="subtitles-footer">Redes sociales</h3>
+                      <p>
+                        <a target="_blank" href="https://www.facebook.com/people/Riwi/100092420949391/?locale=es_LA"><i class="fa-brands fa-square-facebook icons"></i></a>
+                      
+                        <a target="_blank" href="https://www.instagram.com/riwi.io/"><i class="fa-brands fa-square-instagram icons"></i></a>
+                        
+                        <a target="_blank" href="https://www.linkedin.com/company/riwi-io"><i class="fa-brands fa-linkedin icons"></i></a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+
+        </div>
+    </div>
+</body>
+</html> 
